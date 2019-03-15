@@ -22,13 +22,12 @@ $ php beacon.php
 $ php discover.php
 ```
 
-Then launch Broute on the first:
+Then launch Broute on the first node:
 ```
 $ php broute.php
 ```
 
-The repo comes with two pre-signed certificates, on the second node start Broute with the second certificate:
-Then launch Broute on each node as well:
+Each node requires a separate certificate. This repo comes with 2 presigned certificates. On the second node, run:
 ```
 $ php broute.php g2
 ```

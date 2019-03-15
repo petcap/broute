@@ -1,7 +1,7 @@
 # Broute
 A secure mesh network that will eventually forward UDP from point A to B within the network. Secure routing and network graphing comes built-in. The repository includes the peer discovery service and PKI tools necessary to get everything up and running.
 
-Peers authenticate using TLS and individual certificates. Once authenticated, they exchange a proof-of-adjacency which is signed by both peers and then broadcasted over the network. Other peers verify the signature and (if they are valid) adds the peers to its routing list.
+Peers authenticate using TLS and individual certificates. Once authenticated, they exchange a proof-of-adjacency which is signed by both peers and then broadcasted over the network. Other peers verifies the signatures and (if they are valid) adds the corresponding routes to its routing table.
 
 Currently working:
 - Discovery service (adjacent peers discover each other when nearby)

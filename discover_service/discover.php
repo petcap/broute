@@ -1,10 +1,10 @@
 <?php
 //Maximum number of peers to keep track of
-//Prevents this script from eating all memory
+//Prevents DoSing the script
 define("MAX_PEERS", 4096);
 
-//If no peer is seen for this many seconds, delete it from the list
-define("PEER_TIMEOUT", 10);
+//If a peer is not seen for this many seconds, delete it from the list
+define("PEER_TIMEOUT", 30);
 
 //Path to peer id file
 define("PEER_ID_FILE", "/dev/shm/peer-id");

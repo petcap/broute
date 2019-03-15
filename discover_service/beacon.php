@@ -2,6 +2,9 @@
 //Store the randomized Peer-ID in this file
 define("PEER_ID_FILE", "/dev/shm/peer-id");
 
+//Send a beacon every BEACON_INTERVAL second
+define("BEACON_INTERVAL", 3);
+
 $broadcast_addr = "255.255.255.255";
 $broadcast_port = 8888;
 $sender_port = 9999;
@@ -22,8 +25,10 @@ file_put_contents(PEER_ID_FILE, $peer_id);
 
 while (true) {
   socket_sendto($socket, $send, strlen($send), 0, $broadcast_addr, $broadcast_port);
-  echo "Sent beacon, len: ".strlen($send)."\n";
-  sleep(1);
+  sleep(BEACON_INTERVAL);
+
+  //Adds some randomness to when beacons are sent
+  usleep(rand(1, 100000));
 }
 
 socket_close($socket);

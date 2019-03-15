@@ -15,6 +15,7 @@ Peers authenticate using TLS and individual certificates. Once authenticated, th
 - PHP 7 or later with JSON and OpenSSL support (On Debian/Ubuntu, install php-json and php7.0-cli)
 
 **Running Broute**
+
 Start the discovery and broadcast services in separate terminals on all nodes:
 ```
 $ php beacon.php
